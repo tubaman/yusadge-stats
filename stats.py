@@ -10,7 +10,7 @@ from ftplib import FTP
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-LINE_RE = re.compile(r"^\S{10}\s+\d+\s+\w+\s+\w+\s+\d+\s+(\w+\s+\d+\s+\S+)\s+(\S+.log)$")
+LINE_RE = re.compile(r"^\S{10}\s+\d+\s+\w+\s+\w+\s+\d+\s+(\w+\s+\d+\s+\S+)\s+(\S+)\.log$")
 TIME_RE = re.compile("(\d+):(\d+)")
 THIS_YEAR = datetime.datetime.today().year
 
@@ -42,7 +42,7 @@ def main(argv=None):
     path = os.environ['YUSADGE_PATH']
 
     ftp = FTP(host, user, password)
-    #ftp.cwd(path)
+    ftp.cwd(path)
     ftp.retrlines('LIST', process_line)
     print sorted(DATA, reverse=True)[:5]
 
