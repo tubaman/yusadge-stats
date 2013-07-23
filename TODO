@@ -1,3 +1,2 @@
    * timezone support
-   * sample txt reports
-   * json config file
+   * historical storage(SQL, RRD)
