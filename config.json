@@ -1,0 +1,39 @@
+{
+	"sites": [
+		{
+			"organization": "Austin FreeNet",
+			"name": "Dewitty Center Room 209",
+			"regex": "^DEW209"
+		},
+		{
+			"organization": "Austin FreeNet",
+			"name": "Dewitty Center Room 211",
+			"regex": "^DEW211"
+		},
+		{
+			"organization": "Austin FreeNet",
+			"name": "Dewitty Center Room 212",
+			"regex": "^DEW212"
+		},
+		{
+			"organization": "Austin FreeNet",
+			"name": "Dewitty Center Room 213",
+			"regex": "^DEW213"
+		},
+		{
+			"organization": "Austin FreeNet",
+			"name": "Dewitty Center Room 290",
+			"regex": "^DEW290"
+		},
+		{
+			"organization": "Austin FreeNet",
+			"name": "Austin Resource Center for the Homeless",
+			"regex": "^ARCH"
+		},
+		{
+			"organization": "Unknown",
+			"name": "Unknown",
+			"regex": "^([a-zA-Z]+)"
+		}
+	]
+}
