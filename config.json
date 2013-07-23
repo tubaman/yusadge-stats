@@ -31,6 +31,11 @@
 			"regex": "^ARCH"
 		},
 		{
+			"organization": "Austin FreeNet",
+			"name": "Conley Guerrero",
+			"regex": "^CG"
+		},
+		{
 			"organization": "Unknown",
 			"name": "Unknown",
 			"regex": "^([a-zA-Z]+)"
