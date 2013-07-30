@@ -15,8 +15,6 @@ LINE_RE = re.compile(r"^\S{10}\s+\d+\s+\w+\s+\w+\s+\d+\s+(\w+\s+\d+\s+\S+)\s+(\S
 TIME_RE = re.compile("(\d+):(\d+)")
 THIS_YEAR = datetime.datetime.today().year
 
-CONFIG = {}
-
 def load_config():
     config = json.load(open('config.json'))
     for site in config['sites']:
@@ -64,11 +62,10 @@ def graph(since, by_site):
 
 
 def main(argv=None):
-    global CONFIG
     if argv is None:
         argv = sys.argv
     logging.basicConfig()
-    CONFIG = load_config()
+    config = load_config()
 
     data = []
 
@@ -89,7 +86,7 @@ def main(argv=None):
     since = data[-1][0]
     for timestamp, hostname in data:
         found_site = False
-        for site in CONFIG['sites']:
+        for site in config['sites']:
             site_match = site['regex'].match(hostname)
             if site_match:
                 found_site = True
